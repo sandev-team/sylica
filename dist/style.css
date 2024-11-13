@@ -1,0 +1,26 @@
+fieldset {
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: opacity 0.3s ease;
+}
+legend {
+  font-weight: 700;
+  padding: 0 10px;
+  font-size: 1.2em;
+}
+label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.disabled-fieldset {
+  -webkit-user-select: none;
+  user-select: none;
+  opacity: 0.5;
+  pointer-events: none;
+}
+input[type="checkbox"] {
+  margin-right: 0.5em;
+}
