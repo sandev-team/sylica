@@ -7,3 +7,4 @@ docs/build-storybook
 # build
 ./dist
 dist
+pnpm-lock.yaml

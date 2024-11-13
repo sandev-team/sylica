@@ -2,14 +2,21 @@
   "name": "@sandev-team/sylica",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@sandev-team",
     "access": "public"
   },
   "scripts": {
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
-    "build": "vite build",
+    "build": "vite build ",
+    "build:ssr": "vite build --ssrManifest",
     "test": "vitest run",
     "test-watch": "vitest",
     "test:ui": "vitest --ui"
@@ -21,12 +28,15 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
     "@types/react": "^18.3.12",
+    "@vitejs/plugin-react": "^4.3.3",
     "feather-icons-react": "^0.7.0",
     "husky": "^9.1.6",
     "jsdom": "^25.0.1",
     "prettier": "^3.3.3",
     "pretty-quick": "^4.0.0",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "storybook": "^8.4.2",
     "styled-components": "^6.1.13",
     "typescript": "^5.6.3",
@@ -36,7 +46,8 @@
   },
   "peerDependencies": {
     "feather-icons-react": "^0.7.0",
-    "react": "^18.3.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "husky": {
     "hooks": {

@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
+import react from "@vitejs/plugin-react";
 import { peerDependencies } from "./package.json";
 
 export default defineConfig({
@@ -16,11 +17,12 @@ export default defineConfig({
     },
     sourcemap: true, // Generates source maps for debugging.
     emptyOutDir: true, // Clears the output directory before building.
+    ssrManifest: true, // Generates a manifest for server-side rendering.
   },
   test: {
     globals: true,
     environment: "jsdom",
     setupFiles: "./vitest.setup.ts",
   },
-  plugins: [dts()], // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
+  plugins: [dts(), react()], // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
 });
