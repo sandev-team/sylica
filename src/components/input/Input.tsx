@@ -41,7 +41,7 @@ const StyledInput = styled.input<InputProps>`
   `}
 `;
 
-const Input: React.FC<InputProps> = ({
+export const Input: React.FC<InputProps> = ({
   value,
   placeholder,
   size,
@@ -61,5 +61,3 @@ const Input: React.FC<InputProps> = ({
     />
   );
 };
-
-export default Input;

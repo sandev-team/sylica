@@ -8,7 +8,7 @@ interface FieldsetProps {
   disable?: boolean;
 }
 
-const Fieldset: React.FC<FieldsetProps> = ({
+export const Fieldset: React.FC<FieldsetProps> = ({
   legend,
   children,
   className,
@@ -28,5 +28,3 @@ const Fieldset: React.FC<FieldsetProps> = ({
     </fieldset>
   );
 };
-
-export default Fieldset;

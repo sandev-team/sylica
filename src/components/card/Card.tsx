@@ -31,7 +31,7 @@ const StyledCard = styled.div`
 `}
 `;
 
-const Card: FC<CardProps> = ({ title, content, footer, className }) => {
+export const Card: FC<CardProps> = ({ title, content, footer, className }) => {
   return (
     <StyledCard className={className ? className : undefined}>
       {title && <div className="card-header">{title}</div>}
@@ -40,5 +40,3 @@ const Card: FC<CardProps> = ({ title, content, footer, className }) => {
     </StyledCard>
   );
 };
-
-export default Card;

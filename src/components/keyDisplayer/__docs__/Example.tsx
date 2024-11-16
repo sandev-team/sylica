@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import KeyDisplayer, { KeyDisplayerProps } from "../keyDisplayer";
+import { KeyDisplayer, KeyDisplayerProps } from "../keyDisplayer";
 
 const Example: FC<KeyDisplayerProps> = ({
   size = "medium",

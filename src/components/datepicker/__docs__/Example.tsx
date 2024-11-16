@@ -1,5 +1,5 @@
 import React from "react";
-import DatePicker from "../DatePicker";
+import {Datepicker} from "../Datepicker";
 import styled from "styled-components";
 
 // Custom button styling
@@ -13,17 +13,17 @@ const App = () => {
   return (
     <div>
       {/* DatePicker as Button with custom styling */}
-      <DatePicker
+      <Datepicker
         isButton={true}
         className={CustomButton} // Custom class only applies to the button
         disablePastDates={true}
         onChange={(date) => console.log("Selected date:", date)}
       >
         Select Date
-      </DatePicker>
+      </Datepicker>
 
       {/* DatePicker as Input without custom styling */}
-      <DatePicker
+      <Datepicker
         isButton={false}
         disablePastDates={true}
         onChange={(date) => console.log("Selected date:", date)}

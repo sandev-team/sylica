@@ -1,6 +1,6 @@
 // example.tsx
 import React from "react";
-import Fieldset from "../Fieldset";
+import {Fieldset} from "../Fieldset";
 
 const Example: React.FC = () => {
   return (

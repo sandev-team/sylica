@@ -1,1 +1,1 @@
-export { default as keyDisplayer } from "./keyDisplayer";
+export { KeyDisplayer } from "./keyDisplayer";

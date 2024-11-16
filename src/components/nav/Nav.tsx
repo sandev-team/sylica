@@ -14,7 +14,7 @@ const StyledNav = styled.nav`
   ${(props) =>
     props.className
       ? props.className
-    : `
+      : `
       width: 100%;
       display: flex;
       overflow: hidden;
@@ -226,9 +226,7 @@ export const Nav: React.FC<NavProps> = ({ children, className }) => {
     <StyledNav className={className}>
       <StyledNavLogoLayout>{navLogoChildren}</StyledNavLogoLayout>
       <StyledNavMenu>{children}</StyledNavMenu>
-      <NavMenus onClick={() => setSidebarOpen(!isSidebarOpen)}>
-        Burger
-      </NavMenus>
+      <NavMenus onClick={() => setSidebarOpen(!isSidebarOpen)}>Burger</NavMenus>
       {isSidebarOpen && (
         <StyledNavSidebar ref={sidebarRef}>
           <StyledSidebarLinks gap="24px">{navLinksChildren}</StyledSidebarLinks>

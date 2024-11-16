@@ -1,11 +1,11 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import DatePicker from "../DatePicker";
+import {Datepicker} from "../Datepicker";
 import "./CustomButton.css"; // Import the custom button styles
 
-const meta: Meta<typeof DatePicker> = {
+const meta: Meta<typeof Datepicker> = {
   title: "Datepicker",
-  component: DatePicker,
+  component: Datepicker,
   tags: ["autodoc"],
   parameters: {
     docs: {
@@ -15,7 +15,7 @@ const meta: Meta<typeof DatePicker> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof DatePicker>;
+type Story = StoryObj<typeof Datepicker>;
 
 export const AllowPastDateForDatepickerInput: Story = {
   name: "Input allow past",

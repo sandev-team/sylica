@@ -7,6 +7,8 @@ type DatePickerProps = {
   disablePastDates?: boolean; // New prop to enable/disable past date selection
   isButton?: boolean;
   children?: ReactNode;
+  placeholder?: string;
+  selectedDate?: Date;
 };
 
 const Wrapper = styled.div`
@@ -134,12 +136,14 @@ const DaysGrid = styled.div`
   gap: 6px;
 `;
 
-const DatePicker: React.FC<DatePickerProps> = ({
+export const Datepicker: React.FC<DatePickerProps> = ({
   className,
   onChange,
   disablePastDates = false,
   isButton = false,
   children,
+  placeholder,
+  selectedDate
 }) => {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -149,8 +153,7 @@ const DatePicker: React.FC<DatePickerProps> = ({
   const [isYearSelectOpen, setIsYearSelectOpen] = useState(false);
 
   const calendarRef = useRef<HTMLDivElement>(null);
-  const currentDate = new Date(); // Current date to compare against
-
+  const currentDate = new Date();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const firstDayOfMonth = new Date(year, month, 1).getDay();
 
@@ -190,9 +193,9 @@ const DatePicker: React.FC<DatePickerProps> = ({
   if (isButton) {
     return (
       <Wrapper>
-        {isButton && !className ? ( // Only show className if isButton is true and className is empty
+        {isButton && !className ? (
           <Button onClick={() => setIsOpen(!isOpen)} aria-expanded={isOpen}>
-            {children || "Select a date"}
+            {(children || "Select a date") || placeholder}
           </Button>
         ) : (
           <button
@@ -200,7 +203,7 @@ const DatePicker: React.FC<DatePickerProps> = ({
             aria-expanded={isOpen}
             className={className}
           >
-            {children || "Select a date"}
+            {(children || "Select a date") || placeholder}
           </button>
         )}
         {isOpen && (
@@ -294,7 +297,7 @@ const DatePicker: React.FC<DatePickerProps> = ({
           readOnly
           value={selectedDate ? selectedDate.toLocaleDateString() : ""}
           onClick={() => setIsOpen(!isOpen)}
-          placeholder="Select a date"
+          placeholder={placeholder}
         />
         {isOpen && (
           <Calendar ref={calendarRef}>
@@ -381,5 +384,3 @@ const DatePicker: React.FC<DatePickerProps> = ({
     );
   }
 };
-
-export default DatePicker;

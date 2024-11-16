@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import PasswordInput, { PasswordInputProps } from "../password";
+import {Password, PasswordInputProps } from "../password";
 
 const Example: FC<PasswordInputProps> = ({
   placeholder = "Enter password...",
@@ -22,7 +22,7 @@ const Example: FC<PasswordInputProps> = ({
         height: "100%",
       }}
     >
-      <PasswordInput
+      <Password
         value={password}
         placeholder={placeholder}
         size={size}

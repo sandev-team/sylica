@@ -61,7 +61,7 @@ const StyledButton = styled.button<ButtonProps>`
   `}
 `;
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   size,
   primary,
   children, // Use children prop

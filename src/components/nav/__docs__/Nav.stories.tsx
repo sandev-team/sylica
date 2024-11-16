@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import Nav, { NavLogo, NavActions, NavLinks } from "../Nav";
+import { Nav, NavLogo, NavActions, NavLinks } from "../Nav";
 import { Button } from "../../button";
 
 const meta: Meta<typeof Nav> = {
