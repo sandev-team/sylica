@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import {Datepicker} from "../Datepicker";
+import { Datepicker } from "../Datepicker";
 import "./CustomButton.css"; // Import the custom button styles
 
 const meta: Meta<typeof Datepicker> = {

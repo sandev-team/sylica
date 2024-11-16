@@ -1,5 +1,5 @@
 import React from "react";
-import {Datepicker} from "../Datepicker";
+import { Datepicker } from "../Datepicker";
 import styled from "styled-components";
 
 // Custom button styling

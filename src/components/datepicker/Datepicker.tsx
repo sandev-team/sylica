@@ -143,9 +143,11 @@ export const Datepicker: React.FC<DatePickerProps> = ({
   isButton = false,
   children,
   placeholder,
-  selectedDate
+  selectedDate,
 }) => {
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const [selectDate, setSelectDate] = useState<Date | null>(
+    selectedDate || null,
+  );
   const [isOpen, setIsOpen] = useState(false);
   const [month, setMonth] = useState(new Date().getMonth());
   const [year, setYear] = useState(new Date().getFullYear());
@@ -159,7 +161,7 @@ export const Datepicker: React.FC<DatePickerProps> = ({
 
   const handleDateSelect = (day: number) => {
     const newDate = new Date(year, month, day);
-    setSelectedDate(newDate);
+    setSelectDate(newDate);
     setIsOpen(false);
     if (onChange) onChange(newDate);
   };
@@ -195,7 +197,7 @@ export const Datepicker: React.FC<DatePickerProps> = ({
       <Wrapper>
         {isButton && !className ? (
           <Button onClick={() => setIsOpen(!isOpen)} aria-expanded={isOpen}>
-            {(children || "Select a date") || placeholder}
+            {children || "Select a date" || placeholder}
           </Button>
         ) : (
           <button
@@ -203,7 +205,7 @@ export const Datepicker: React.FC<DatePickerProps> = ({
             aria-expanded={isOpen}
             className={className}
           >
-            {(children || "Select a date") || placeholder}
+            {children || "Select a date" || placeholder}
           </button>
         )}
         {isOpen && (
@@ -276,7 +278,7 @@ export const Datepicker: React.FC<DatePickerProps> = ({
                 return (
                   <DateButton
                     key={i}
-                    isSelected={selectedDate?.getDate() === day}
+                    isSelected={selectDate?.getDate() === day}
                     isDisabled={isDisabled} // Disable button for past dates
                     onClick={() => !isDisabled && handleDateSelect(day)} // Only call if not a past date
                   >
@@ -295,7 +297,7 @@ export const Datepicker: React.FC<DatePickerProps> = ({
         <Input
           type="text"
           readOnly
-          value={selectedDate ? selectedDate.toLocaleDateString() : ""}
+          value={selectDate ? selectDate.toLocaleDateString() : ""}
           onClick={() => setIsOpen(!isOpen)}
           placeholder={placeholder}
         />
@@ -369,7 +371,7 @@ export const Datepicker: React.FC<DatePickerProps> = ({
                 return (
                   <DateButton
                     key={i}
-                    isSelected={selectedDate?.getDate() === day}
+                    isSelected={selectDate?.getDate() === day}
                     isDisabled={isDisabled} // Disable button for past dates
                     onClick={() => !isDisabled && handleDateSelect(day)} // Only call if not a past date
                   >

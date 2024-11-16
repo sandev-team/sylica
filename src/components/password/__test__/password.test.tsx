@@ -1,7 +1,7 @@
 import React from "react";
 import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
-import {Password} from "../password";
+import { Password } from "../password";
 
 describe("Password component", () => {
   it("Password should render correctly", () => {

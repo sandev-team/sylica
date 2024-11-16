@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import {Password, PasswordInputProps } from "../password";
+import { Password, PasswordInputProps } from "../password";
 
 const Example: FC<PasswordInputProps> = ({
   placeholder = "Enter password...",
