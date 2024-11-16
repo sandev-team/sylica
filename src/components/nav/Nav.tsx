@@ -1,6 +1,5 @@
-import React, { Fragment, useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, Fragment } from "react";
 import styled from "styled-components";
-import FeatherIcon from "feather-icons-react";
 
 export type NavProps = {
   children?: React.ReactNode;
@@ -15,7 +14,8 @@ const StyledNav = styled.nav`
   ${(props) =>
     props.className
       ? props.className
-      : `
+    : `
+      width: 100%;
       display: flex;
       overflow: hidden;
       justify-content: space-between;
@@ -227,7 +227,7 @@ const Nav: React.FC<NavProps> = ({ children, className }) => {
       <StyledNavLogoLayout>{navLogoChildren}</StyledNavLogoLayout>
       <StyledNavMenu>{children}</StyledNavMenu>
       <NavMenus onClick={() => setSidebarOpen(!isSidebarOpen)}>
-        <FeatherIcon icon={"menu"} />
+        Burger
       </NavMenus>
       {isSidebarOpen && (
         <StyledNavSidebar ref={sidebarRef}>
@@ -262,5 +262,6 @@ export const NavMenus: React.FC<{
 }> = ({ onClick, children }) => (
   <StyledNavBurgur onClick={onClick}>{children}</StyledNavBurgur>
 );
+
 
 export default Nav;
