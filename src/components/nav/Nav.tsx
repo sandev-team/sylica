@@ -170,7 +170,7 @@ const StyledSidebarLinks = styled.div<SidebarLinksProps>`
   }
 `;
 
-const Nav: React.FC<NavProps> = ({ children, className }) => {
+export const Nav: React.FC<NavProps> = ({ children, className }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
@@ -262,6 +262,3 @@ export const NavMenus: React.FC<{
 }> = ({ onClick, children }) => (
   <StyledNavBurgur onClick={onClick}>{children}</StyledNavBurgur>
 );
-
-
-export default Nav;

@@ -1,5 +1,5 @@
-export { default as Nav } from "./Nav";
-export { default as NavLogo } from "./Nav";
-export { default as NavLinks } from "./Nav";
-export { default as NavActions } from "./Nav";
-export { default as NavMenus } from "./Nav";
+export { Nav } from "./Nav";
+export { NavLogo } from "./Nav";
+export { NavLinks } from "./Nav";
+export { NavActions } from "./Nav";
+export { NavMenus } from "./Nav";
