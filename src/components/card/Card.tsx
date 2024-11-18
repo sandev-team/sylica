@@ -31,9 +31,15 @@ const StyledCard = styled.div`
 `}
 `;
 
-export const Card: FC<CardProps> = ({ title, content, footer, className }) => {
+export const Card: FC<CardProps> = ({
+  title,
+  content,
+  footer,
+  className,
+  ...props
+}) => {
   return (
-    <StyledCard className={className ? className : undefined}>
+    <StyledCard className={className ? className : undefined} {...props}>
       {title && <div className="card-header">{title}</div>}
       {content}
       {footer}
