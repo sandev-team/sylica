@@ -133,6 +133,7 @@ const StyledNavSidebar = styled.div`
   justify-content: space-between;
   gap: 12px;
   top: 0;
+  z-index: 999;
   right: 0;
   padding: 16px; /* Padding will be included in total height */
   border-radius: 8px 0 0 8px;
@@ -155,8 +156,7 @@ const StyledNavSidebar = styled.div`
 const StyledSidebarLinks = styled.div<SidebarLinksProps>`
   display: flex;
   flex-direction: column;
-  gap: ${(props) =>
-    props.gap || "24px"}; /* Use the prop value or default to 24px */
+  gap: ${(props) => props.gap || "24px"};
 
   a {
     text-decoration: none;
@@ -226,7 +226,24 @@ export const Nav: React.FC<NavProps> = ({ children, className }) => {
     <StyledNav className={className}>
       <StyledNavLogoLayout>{navLogoChildren}</StyledNavLogoLayout>
       <StyledNavMenu>{children}</StyledNavMenu>
-      <NavMenus onClick={() => setSidebarOpen(!isSidebarOpen)}>Burger</NavMenus>
+      <NavMenus onClick={() => setSidebarOpen(!isSidebarOpen)}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          className="main-grid-item-icon"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        >
+          <line x1="3" x2="21" y1="12" y2="12" />
+          <line x1="3" x2="21" y1="6" y2="6" />
+          <line x1="3" x2="21" y1="18" y2="18" />
+        </svg>
+      </NavMenus>
       {isSidebarOpen && (
         <StyledNavSidebar ref={sidebarRef}>
           <StyledSidebarLinks gap="24px">{navLinksChildren}</StyledSidebarLinks>
