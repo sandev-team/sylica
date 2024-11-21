@@ -1,5 +1,5 @@
 import React, { ChangeEventHandler } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export type InputProps = {
   value?: string;
@@ -9,42 +9,59 @@ export type InputProps = {
   className?: string; // Allow users to pass in their own className
 };
 
+// Helper functions for dynamic styles
+const getPadding = (size: InputProps["size"]) => {
+  switch (size) {
+    case "small":
+      return "6px 8px";
+    case "medium":
+      return "8px 12px";
+    case "large":
+      return "10px 16px";
+    default:
+      return "8px 12px";
+  }
+};
+
+const getFontSize = (size: InputProps["size"]) => {
+  switch (size) {
+    case "small":
+      return "13.33px";
+    case "medium":
+      return "16px";
+    case "large":
+      return "19.2px";
+    default:
+      return "16px";
+  }
+};
+
+// Styled Component
 const StyledInput = styled.input<InputProps>`
-  ${(props) =>
-    props.className
-      ? "" // If a className is provided, skip applying default styles
-      : `
-    border: 1px solid #E6E6E6;
-    border-radius: 4px;
-    padding: ${
-      props.size === "small"
-        ? "6px 8px"
-        : props.size === "medium"
-          ? "8px 12px"
-          : "10px 16px"
-    };
-    font-size: ${
-      props.size === "small"
-        ? "13.33px"
-        : props.size === "medium"
-          ? "16px"
-          : "19.2px"
-    };
-    width: 100%;
-    box-sizing: border-box;
-    outline: none; // Remove the default outline
-    transition: border-color 0.2s ease, box-shadow 0.2s ease; // Add transition for smooth focus effect
-    &:focus {
-      border-color: #ED8822; // Change this to your desired color
-      box-shadow: 0 0 0 2px rgba(237, 136, 34, 0.2); // Optional: Add a subtle focus shadow
-    }
-  `}
+  border: ${(props) => (!props.className ? "1px solid #e6e6e6" : "inherit")};
+  border-radius: ${(props) => (!props.className ? "4px" : "inherit")};
+  padding: ${(props) =>
+    !props.className ? getPadding(props.size) : "inherit"};
+  font-size: ${(props) =>
+    !props.className ? getFontSize(props.size) : "inherit"};
+  width: ${(props) => (!props.className ? "100%" : "inherit")};
+  box-sizing: border-box;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:focus {
+    border-color: ${(props) => (!props.className ? "#ed8822" : "inherit")};
+    box-shadow: ${(props) =>
+      !props.className ? "0 0 0 2px rgba(237, 136, 34, 0.2)" : "inherit"};
+  }
 `;
 
 export const Input: React.FC<InputProps> = ({
   value,
   placeholder,
-  size,
+  size = "medium",
   onChange,
   className,
   ...props
@@ -56,7 +73,7 @@ export const Input: React.FC<InputProps> = ({
       placeholder={placeholder}
       size={size}
       onChange={onChange}
-      className={className} // Pass the className down
+      className={className}
       {...props}
     />
   );

@@ -15,6 +15,7 @@ const StyledCard = styled.div`
         padding: 24px 24px;
         border-radius: 8px;
         background-color: #fff;
+        width: 100%;
       `}
 `;
 
