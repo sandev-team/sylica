@@ -1,5 +1,7 @@
 import React from "react";
-import { Nav, NavLogo, NavActions, NavLinks } from "../Nav";
+import { Nav } from "../Nav";
+import { NavActions, NavLinks, NavLogo, NavMenus } from "../Nav.subcomponents";
+
 import FeatherIcon from "feather-icons-react";
 
 const ExampleNav: React.FC = () => {

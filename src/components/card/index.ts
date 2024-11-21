@@ -1,1 +1,4 @@
-export { Card } from "./Card";
+import { Card } from "./Card";
+import { CardBlank } from "./CardBlank";
+
+export { Card, CardBlank };

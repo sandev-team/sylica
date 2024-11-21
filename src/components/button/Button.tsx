@@ -64,7 +64,7 @@ const StyledButton = styled.button<ButtonProps>`
 export const Button: React.FC<ButtonProps> = ({
   size,
   primary,
-  children, // Use children prop
+  children,
   onClick,
   className,
   justify = "center",
@@ -76,11 +76,11 @@ export const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       primary={primary}
       size={size}
-      className={className} // Pass the className down
+      className={className}
       justify={justify}
       {...props}
     >
-      {children} {/* Render children instead of text */}
+      {children}
     </StyledButton>
   );
 };
