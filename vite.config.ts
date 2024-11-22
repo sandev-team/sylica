@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import react from "@vitejs/plugin-react";
 import { peerDependencies } from "./package.json";
+import path from "path";
 
 export default defineConfig({
   build: {
@@ -25,4 +26,9 @@ export default defineConfig({
     setupFiles: "./vitest.setup.ts",
   },
   plugins: [dts(), react()], // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 });
