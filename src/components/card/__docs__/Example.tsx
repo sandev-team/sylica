@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../Card"; // Adjust the path as needed
+import { Card } from "../Card"; // Adjust the path as needed
 
 const Example = () => {
   return (

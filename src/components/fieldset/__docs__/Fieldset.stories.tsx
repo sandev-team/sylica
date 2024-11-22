@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import Fieldset from "../Fieldset"; // Ensure the path is correct
+import { Fieldset } from "../Fieldset"; // Ensure the path is correct
 import "../CustomFieldset.css"; // Import any custom styles if needed
 
 const meta: Meta<typeof Fieldset> = {

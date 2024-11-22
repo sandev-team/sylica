@@ -18,7 +18,8 @@
     "build:ssr": "vite build --ssrManifest",
     "test": "vitest run",
     "test-watch": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "storybook": "cd ./docs/ && pnpm storybook"
   },
   "keywords": [],
   "author": "",

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import KeyDisplayer from "../keyDisplayer";
+import { KeyDisplayer } from "../keyDisplayer";
 
 const meta: Meta<typeof KeyDisplayer> = {
   title: "Key Displayer",

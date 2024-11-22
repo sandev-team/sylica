@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import Card from "../Card"; // Adjust the path as needed
+import { Card } from "../Card"; // Adjust the path as needed
 import { Button } from "../../button";
 
 const meta: Meta<typeof Card> = {

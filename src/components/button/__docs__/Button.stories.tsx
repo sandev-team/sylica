@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import Button from "../Button";
+import { Button } from "../Button";
 import FeatherIcon from "feather-icons-react";
 import "./Button.css";
 
@@ -30,12 +30,7 @@ export const Primary: Story = {
 
 export const PrimaryWithChildren: Story = {
   args: {
-    children: (
-      <>
-        <FeatherIcon icon={"plus"} size={16} />
-        <span>New Draft</span>
-      </>
-    ), // You can use any JSX as children
+    children: [<FeatherIcon icon={"plus"} size={16} />, <span>New Draft</span>],
     primary: true,
     size: "small",
     onClick: () => console.log("Button clicked"),
@@ -53,12 +48,7 @@ export const Secondary: Story = {
 
 export const SecondaryWithChildren: Story = {
   args: {
-    children: (
-      <>
-        <FeatherIcon icon={"clipboard"} size={16} />
-        <span>Copy</span>
-      </>
-    ), // You can use any JSX as children
+    children: [<FeatherIcon icon={"clipboard"} size={16} />, <span>Copy</span>],
     primary: false,
     size: "small",
     onClick: () => console.log("Button clicked"),
