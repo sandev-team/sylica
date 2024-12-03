@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "../Button";
+import { Button } from "../../../../sylica/src/components/button/";
 import FeatherIcon from "feather-icons-react";
 import "./Button.css";
 

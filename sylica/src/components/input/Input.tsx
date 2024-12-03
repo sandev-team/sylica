@@ -1,5 +1,5 @@
 import React, { ChangeEventHandler } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export type InputProps = {
   value?: string;
