@@ -15,6 +15,7 @@
   "scripts": {
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
     "build": "rm -rf dist && vite build ",
+    "build:watch": "rm -rf dist && vite build --watch",
     "build:ssr": "vite build --ssrManifest",
     "test": "vitest run",
     "test-watch": "vitest",
