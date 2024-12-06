@@ -1,0 +1,61 @@
+{
+  "name": "@sylica/forms",
+  "version": "0.0.0",
+  "description": "Contains form-related components, such as Input, Checkbox, RadioButton, Select, TextArea, and FormGroup.",
+  "author": "ZEE <suphachok.dev@gmail.com>",
+  "homepage": "https://github.com/sandev-team/sylica#readme",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.es.js",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandev-team/sylica.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sandev-team/sylica/issues"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:ssr": "vite build --ssrManifest",
+    "preview": "vite preview",
+    "test": "node ./__tests__/@sylica/forms.test.js"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.26.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@types/node": "^22.10.1",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@wyw-in-js/vite": "^0.5.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vite-plugin-dts": "^4.3.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^2.1.8"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
+    "@linaria/core": "^6.2.0",
+    "@linaria/react": "^6.2.1"
+  }
+}

@@ -8,3 +8,7 @@ docs/build-storybook
 ./dist
 dist
 pnpm-lock.yaml
+
+# lerna
+lerna-debug.log
+**/lib

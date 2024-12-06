@@ -6,4 +6,4 @@ export * from "./input";
 export * from "./keyDisplayer";
 export * from "./nav";
 export * from "./password";
-export * from "./sidebar"
+export * from "./sidebar";
