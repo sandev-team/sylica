@@ -29,21 +29,31 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:watch": "vite build --watch",
     "build:ssr": "vite build --ssrManifest",
     "preview": "vite preview",
     "test": "node ./__tests__/@sylica/forms.test.js"
   },
   "devDependencies": {
+    "@babel/plugin-syntax-flow": "^7.26.0",
+    "@babel/preset-flow": "^7.25.9",
     "@babel/preset-react": "^7.26.3",
     "@babel/preset-typescript": "^7.26.0",
+    "@linaria/babel-preset": "^5.0.4",
+    "@linaria/shaker": "^5.0.3",
+    "@linaria/vite": "^5.0.4",
     "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
     "@types/node": "^22.10.1",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
     "@vitejs/plugin-react": "^4.3.4",
-    "@wyw-in-js/vite": "^0.5.5",
+    "babel-plugin-macros": "^3.1.0",
+    "jsdom": "^25.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "tailwindcss": "^3.4.16",
+    "twin.macro": "^3.4.1",
     "typescript": "^5.7.2",
     "vite": "^6.0.3",
     "vite-plugin-dts": "^4.3.0",
@@ -57,5 +67,21 @@
   "dependencies": {
     "@linaria/core": "^6.2.0",
     "@linaria/react": "^6.2.1"
+  },
+  "babelMacros": {
+    "twin": {
+      "styled": {
+        "import": "styled",
+        "from": "@linaria/react"
+      },
+      "css": {
+        "import": "css",
+        "from": "@linaria/core"
+      },
+      "global": {
+        "import": "css",
+        "from": "@linaria/core"
+      }
+    }
   }
 }
