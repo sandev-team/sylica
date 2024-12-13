@@ -9,9 +9,12 @@ export default defineConfig({
   plugins: [
     react({
       plugins: [["@swc/plugin-emotion", {}]],
+      jsxImportSource: "@emotion/react",
+      tsDecorators: true,
     }),
     dts({
       insertTypesEntry: true,
+      tsconfigPath: "./tsconfig.app.json",
     }),
     tsconfigPaths(),
   ],
