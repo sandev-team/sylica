@@ -5,17 +5,20 @@
   "author": "ZEE <suphachok.dev@gmail.com>",
   "homepage": "https://github.com/sandev-team/sylica#readme",
   "license": "MIT",
-  "type": "module",
   "files": [
     "lib"
   ],
   "main": "./lib/index.umd.js",
   "module": "./lib/index.es.js",
-  "types": "./lib/index.d.ts",
+  "types": "./lib/types/index.d.ts",
   "exports": {
-    "import": "./lib/index.es.js",
-    "require": "./lib/index.umd.js"
+    ".": {
+      "import": "./lib/index.es.js",
+      "require": "./lib/index.umd.js",
+      "types": "./lib/types/index.d.ts"
+    }
   },
+  "type": "module",
   "directories": {
     "lib": "lib",
     "test": "__tests__"

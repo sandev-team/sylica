@@ -15,6 +15,7 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       tsconfigPath: "./tsconfig.app.json",
+      outDir: "./lib/types",
     }),
     tsconfigPaths(),
   ],
