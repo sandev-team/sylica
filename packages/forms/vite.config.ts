@@ -22,7 +22,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: "./src/index.ts",
-      name: "SylicaUI",
+      name: "@sylica/forms",
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
