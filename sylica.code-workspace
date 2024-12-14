@@ -1,0 +1,23 @@
+{
+  "folders": [
+    {
+      "name": "✨ root",
+      "path": ".",
+    },
+    {
+      "name": "📄 docs",
+      "path": "packages/docs",
+    },
+    {
+      "name": "📦 @sylica/forms",
+      "path": "packages/forms",
+    },
+    {
+      "name": "🧪 test/next-app",
+      "path": "packages/test_usage/next-app",
+    },
+  ],
+  "settings": {
+    "typescript.tsdk": "node_modules/typescript/lib",
+  },
+}
