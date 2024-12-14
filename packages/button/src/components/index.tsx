@@ -26,7 +26,6 @@ const StyledDiv = styled.div`
   height: 20px;
   background-color: blue;
   transform: rotate(45deg);
-
   position: relative;
   top: 0;
   right: 0;
