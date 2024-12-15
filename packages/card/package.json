@@ -1,7 +1,7 @@
 {
-  "name": "@sylica/button",
+  "name": "@sylica/card",
   "version": "0.0.0",
-  "description": "Includes button components like `PrimaryButton`, `SecondaryButton`, `IconButton`, and `LoadingButton`.",
+  "description": "Includes card components like `Card`, `CardHeader`, `CardBody`, `CardFooter`, and `CardImage`.",
   "author": "ZEE <suphachok.dev@gmail.com>",
   "homepage": "https://github.com/sandev-team/sylica#readme",
   "license": "MIT",
