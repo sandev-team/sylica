@@ -1,7 +1,7 @@
 {
-  "name": "@sylica/button",
+  "name": "@sylica/datepicker",
   "version": "0.0.0",
-  "description": "Includes button components like `PrimaryButton`, `SecondaryButton`, `IconButton`, and `LoadingButton`.",
+  "description": "Includes datepicker component.",
   "author": "ZEE <suphachok.dev@gmail.com>",
   "homepage": "https://github.com/sandev-team/sylica#readme",
   "license": "MIT",
