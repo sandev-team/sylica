@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import { peerDependencies } from "./package.json";
 import dts from "vite-plugin-dts";
 import tsconfigPaths from "vite-tsconfig-paths";
+import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -19,6 +20,11 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   build: {
     lib: {
       entry: "./src/index.ts",

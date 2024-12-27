@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { KeyDisplayerProps } from "./types/keyDisplayerProps.type";
+import { KeyDisplayerProps } from "./types/keyDisplayerProps.type.ts";
 import { Wrapper, KeyDisplay, ToggleButton} from "./style/keyDisplayer.style.ts";
 
 

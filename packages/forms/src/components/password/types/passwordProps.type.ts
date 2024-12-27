@@ -1,7 +1,7 @@
-export type PasswordInputProps = {
+export interface PasswordInputProps {
   placeholder?: string;
   value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
-  size?: "small" | "medium" | "large" | "fill";
-};
+  sizing?: "small" | "medium" | "large" | "fill";
+} 

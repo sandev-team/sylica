@@ -7,20 +7,20 @@ export const Password: React.FC<PasswordInputProps> = ({
   value,
   onChange,
   className,
-  size = "medium",
+  sizing = 'small',
 }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const handleToggle = () => setShowPassword((prev) => !prev);
 
   return (
-    <Wrapper className={className} size={size} isFocused={isFocused}>
+    <Wrapper className={className} sizing={sizing} isFocused={isFocused}>
       <Input
         type={showPassword ? "text" : "password"}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        size={size}
+        sizing={sizing}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
       />

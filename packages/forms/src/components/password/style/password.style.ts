@@ -8,7 +8,7 @@ export const Wrapper = styled.div<PasswordInputProps & { isFocused: boolean }>`
   border-radius: 8px;
   padding: 6px 12px;
   background: #fff;
-  width: ${(props) => (props.size === "fill" ? "100%" : "fit-content")};
+  width: ${(props) => (props.sizing === "fill" ? "100%" : "fit-content")};
   box-shadow: ${(props) =>
     props.isFocused ? "0 0 0 2px rgba(237, 136, 34, 0.2)" : "none"};
   transition:
@@ -23,11 +23,11 @@ export const Input = styled.input<PasswordInputProps>`
   padding: 4px 8px;
   flex: 1;
   width: ${(props) =>
-    props.size === "small"
+    props.sizing === "small"
       ? "100px"
-      : props.size === "medium"
+      : props.sizing === "medium"
         ? "200px"
-        : props.size === "large"
+        : props.sizing === "large"
           ? "300px"
           : "100%"};
 `;

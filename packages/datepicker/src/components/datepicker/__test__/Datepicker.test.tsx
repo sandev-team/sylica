@@ -1,6 +1,5 @@
-import React from "react";
 import { describe, expect, it } from "vitest";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { Datepicker } from "../Datepicker";
 
 describe("DatePicker component", () => {

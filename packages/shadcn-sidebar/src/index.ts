@@ -1,2 +1,2 @@
 /** @jsxImportSource @emotion/react */
-export * from "./components/card";
+export * from "./components/sidebar";
